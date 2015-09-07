@@ -1,0 +1,31 @@
+cs
+Make "size 5
+setPenWidth 1
+repeat 600 [ fd :size right 137.5 Make "size :size*1.101]
+repeat 600 [ penUp fd :size right 137.5 Make "size :size*1.101 PenDown arc 360 :size]
+repeat 600 [ fd :size right 137.5 Make "size :size*1.1 arc 360 :size]
+repeat 130 [ fd :size right 137.5 Make "size :size+5]
+repeat 130 [ fd :size right 222.5 Make "size :size+5]
+pu fd 100 pd
+repeat 12 [repeat 50 [ fd :size right 222.5 Make "size :size+5] Make "size 5 lt 45 bk 100]
+
+sunflower
+cs
+Make "size 5
+setPenWidth 5
+repeat 600 [ setPenWidth 1 fd :size right 137.5 Make "size :size+4 setPenWidth 5+0.03*:size arc 360 5+0.02*:size ]
+repeat 600 [ setPenWidth 1 fd :size right 137.5 Make "size :size+4 setPenWidth 5+0.03*:size  ]
+
+
+Golden Rectangle
+cs
+setPenWidth 1
+Make "size 5
+repeat 600 [ fd :size rt 90 fd :size*1.618 rt 90  fd :size rt 90 Make "size :size*1.618 ]
+
+
+pentagonal sunflower
+cs
+Make "size 5
+setPenWidth 1
+repeat 600 [ penUp fd :size right 137.5 Make "size :size+3 penDown repeat 5 [repeat 5[ fd 0.04*:size rt 72] rt 72]]
