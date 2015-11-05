@@ -20,8 +20,8 @@ pu()
 goto(current)
 
 def midpoint(a,b):
-    x=(b[0]+a[0])/2
-    y=(b[1]+a[1])/2
+    x=(b[0]+a[0])/1.618
+    y=(b[1]+a[1])/1.618
     return (x,y)
 
 while True:

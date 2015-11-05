@@ -6,16 +6,16 @@ clearscreen()
 speed(0)
 resizemode("auto")
 
-# a = (0,500)
-# b = (433.01270189,-250)
-# c = (-433.01270189,-250)
+# hexagon
 a = (0,300)
-b = (259.8076211353316,-150)
-c = (-259.8076211353316,-150)
+b = (260,150)
+c = (260,-150)
+d = (0,-300)
+e = (-260,-150)
 
 last = (0,0)
 current = (0,0)
-size = 3
+size = 4
 pu()
 goto(current)
 
@@ -25,7 +25,7 @@ def midpoint(a,b):
     return (x,y)
 
 while True:
-    opc = random.randrange(1,4)
+    opc = random.randrange(1,7)
     if(opc == 1):
         '''select a'''
         last = current
@@ -46,10 +46,40 @@ while True:
         circle(size)
         end_fill()
         pu()
-    else:
+    elif(opc == 3):
         '''select c'''
         last = current
         current = midpoint(last,c)
+        goto(current)
+        pd()
+        begin_fill()
+        circle(size)
+        end_fill()
+        pu()
+    elif(opc == 4):
+        '''select d'''
+        last = current
+        current = midpoint(last,d)
+        goto(current)
+        pd()
+        begin_fill()
+        circle(size)
+        end_fill()
+        pu()
+    elif(opc == 5):
+        '''select e'''
+        last = current
+        current = midpoint(last,e)
+        goto(current)
+        pd()
+        begin_fill()
+        circle(size)
+        end_fill()
+        pu()
+    else:
+        '''select f'''
+        last = current
+        current = midpoint(last,f)
         goto(current)
         pd()
         begin_fill()
